@@ -10,8 +10,8 @@ const votedBandModel = Backbone.Model.extend({
 		imageUrl: '',
 		voted: false,
 	},
-	idAttribute: 'id',
-	urlRoot: 'http://small-tiyfe.herokuapp.com/collections/'
+	idAttribute: '_id',
+	urlRoot: 'http://small-tiyfe.herokuapp.com/collections/danas_bands'
 });
 
 export default votedBandModel

@@ -4,7 +4,7 @@ import votedBand from '../models/votedBandModel';
 
 const votedBandCollection = Backbone.Collection.extend({
 	model: PostingModel,
-	url: 'http://small-tiyfe.herokuapp.com/collections/'
+	url: 'http://small-tiyfe.herokuapp.com/collections/danas_bands'
 });
 
 

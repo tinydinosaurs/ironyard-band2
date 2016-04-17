@@ -6,13 +6,12 @@ import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory, Link} from 'react-router';
 import Header from './components/header';
 import Voted from './components/voteResults';
-import Search from './components/searchResults';
-
+import BandSearch from './components/searchResults';
 
 
 const router = (
 	<Router history={hashHistory}>
-		<Route path="/" component={Search}/>
+		<Route path="/" component={BandSearch}/>
 		<Route path="/voted" component={Voted}/>
 	</Router>
 )
