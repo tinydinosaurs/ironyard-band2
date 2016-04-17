@@ -18,13 +18,3 @@ const router = (
 )
 
 ReactDOM.render(router, document.querySelector('main'));
-
-
-
-// const TestComponent = React.createClass({
-// 	render: function() {
-// 		return <h1>Test~</h1>;
-// 	}
-// });
-
-// ReactDOM.render(<TestComponent />, document.querySelector('main'));
