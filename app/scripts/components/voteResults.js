@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './header';
-import votedBands from '../collections/votedBandCollection'
+import votedBands from '../collections/votedBandCollection';
+import BandBox from './band';
 
 const Voted = React.createClass({
   
@@ -11,26 +12,33 @@ const Voted = React.createClass({
   },
 
   componentDidMount: function() {
-    
+    votedBands.on('add', () => {
+      this.setState({voted: votedBands})
+    });
+    votedBands.fetch()
   },
 
   render: function() {
-    
+    let votedBand = votedBands.map((value, i, arr) => {
+       return (
+          <BandBox 
+            key={value.get('_id')}
+            name={value.get('bandName')}
+            image={value.get('imageUrl')}
+          /> ) 
+    })
 
-
-    return (
-		<section>
+  return (
+    <section>
       <Header />
       <h2>your favorite bands:</h2>
       <div class="voted-bands">
-        <div class="voted-band">
-          <h3>band name</h3>
-          <img src="" />
-        </div>
+        {votedBand}
       </div>
-		</section>
+    </section>
     )
   }
+    
 });
 
 export default Voted
