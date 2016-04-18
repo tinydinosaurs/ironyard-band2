@@ -1,9 +1,9 @@
 import Backbone from 'backbone';
-import votedBand from '../models/votedBandModel';
+import votedBandModel from '../models/votedBandModel';
 
 
 const votedBandCollection = Backbone.Collection.extend({
-	model: PostingModel,
+	model: votedBandModel,
 	url: 'http://small-tiyfe.herokuapp.com/collections/danas_bands'
 });
 

@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory, Link} from 'react-router';
 import Header from './components/header';
 import Voted from './components/voteResults';
-import BandSearch from './components/searchResults';
+import BandSearch from './components/bandSearch';
 
 
 const router = (
