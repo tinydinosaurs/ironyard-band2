@@ -6,7 +6,7 @@ const searchResult = React.createClass({
 
   castVote: function(e) {
     e.preventDefault();
-    console.log(this.refs.name.innerHTML);
+    // console.log(this.refs.name.innerHTML);
     let votedBand = {
       bandName: this.props.name,
       imageUrl: this.props.image

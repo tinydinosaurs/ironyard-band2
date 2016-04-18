@@ -1,8 +1,23 @@
 import React from 'react';
-import Header from './header'
+import Header from './header';
+import votedBands from '../collections/votedBandCollection'
 
 const Voted = React.createClass({
+  
+  getInitialState: function() {
+    return (
+        {voted: []}
+      )
+  },
+
+  componentDidMount: function() {
+    
+  },
+
   render: function() {
+    
+
+
     return (
 		<section>
       <Header />

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './header';
 import $ from 'jquery';
 import votedBandCollection from '../collections/votedBandCollection';
-import searchResult from './searchResult';
+import SearchResult from './searchResult';
 
 const BandSearch = React.createClass({
   getInitialState: function() {
@@ -13,8 +13,8 @@ const BandSearch = React.createClass({
     e.preventDefault();
     let searchString = 'https://api.spotify.com/v1/search?q='+this.refs.search.value+'*&type=artist'; 
     
-    $.get(searchString, function(result) {
-      // console.log(result.artists.items);
+   this.findMusic = $.get(searchString, function(result) {
+      console.log(result.artists.items);
       this.setState({artists: result.artists.items});
     }.bind(this));
   },
@@ -25,9 +25,9 @@ const BandSearch = React.createClass({
       if(!val.images[0]) {
         val.images.push({url: 'http://www.enchanting-costarica.com/wp-content/uploads/2015/09/Sloth-babies-two-toed-hugging-Credit-Sam-Trull-2014.jpg'});
       }
-      console.log('searching')
+      // console.log('searching')
       return (
-        <searchResult 
+        <SearchResult 
           key={val.id} 
           name={val.name} 
           image={val.images[0].url} 
